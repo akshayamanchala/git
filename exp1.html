@@ -1,0 +1,108 @@
+<html>
+<head>
+    <title> Welcome to Our Event</title>
+    <style>
+        #N1{
+            background-color: black;
+width:600;
+height:380;
+margin-top: 130px;
+  margin-bottom: 100px;
+  margin-right: 150px;
+  margin-left: 420px;
+        }
+        div{
+            background-color:violet;
+color:white;
+width:600;
+height:380;
+        }
+body{
+background-image:url('https://tse2.mm.bing.net/th?id=OIP.lShUNZEkqm7vq4dca1djNgHaFL&pid=Api&P=0&h=180');
+}
+    </style>
+    <script language="javascript">
+    function validate() {
+        var uname = f1.username.value;
+        if (uname.length<=0)
+        {
+            alert("Please Enter UserName");
+            f1.username.focus();
+            return false;
+        }
+        if (uname.length < 8)
+        {
+            alert("Please enter UserName not less than 8");
+            f1.username.focus();
+            return false;
+        }
+        var year = f1.year.value;
+        if (year.length<=0)
+        {
+            alert("Please Enter year of Study");
+            f1.year.focus();
+            return false;
+        }
+      var roll=f1.roll.value;
+if(roll.length<=0){
+alert("Please enter roll number");
+return false;
+}
+var email = f1.email.value;
+        if (email.length<=0)
+        {
+            alert("Please Enter email");
+            f1.email.focus();
+            return false;
+        }
+        else {
+            let eflag=false;
+            for(i=0;i<email.length;i++) {
+                if(email.charAt(i)=="@")
+                    {
+                        eflag=true;
+                    }
+            }
+                if(!(eflag))
+                {
+                    alert("Please enter a valid Email ID");
+                    f1.email.focus();
+                    return false;
+                }
+        }
+alert("Registration Successful");
+    }
+    </script>
+</head>
+<div id = N1>
+<body>
+ 
+<center><br>
+   
+    <h3>
+       Registration Form</h3>
+    <br/>
+    <div>
+    <form name="f1" align="center">
+    <table cellpadding="20" align="center" >
+    <tr><td> Student Name:<font color="white"></font></td>
+    <td><input type="text" name="username"></td></tr>
+<tr><td>Year of Study:</td>
+    <td><input type="text" name="year"></td></tr>
+    <tr><td>Email ID:</td>
+    <td><input type="text" name="email"></td></tr>
+    <tr><td>Phone Number:</td>
+    <td><input type="text" name="phno"></td></tr>
+    <tr><td></td><td><input type="button" value="SUBMIT" hspace="10" onclick="validate()">
+    <input type="reset" value="RESET"></td></tr>
+    <tr> <td colspan=2 ><font color="black">All the best for your Participation</font>
+    </td>
+    </tr>
+    </table>
+    </form>
+    </div>
+</center>
+
+</body>
+</div>
+</html>
